@@ -10,6 +10,15 @@
 @interface AppDelegate ()
 
 @property (strong) IBOutlet NSWindow *window;
+
+@property (weak) IBOutlet NSTextField *inputField;
+@property (weak) IBOutlet NSTextFieldCell *inputTextField;
+
+@property (weak) IBOutlet NSTextFieldCell *userLabel;
+@property (weak) IBOutlet NSButton *button;
+
+- (IBAction)pressButton:(id)sender;
+
 @end
 
 @implementation AppDelegate
@@ -29,4 +38,14 @@
 }
 
 
+- (IBAction)pressButton:(id)sender {
+    NSString *userInput = self.inputTextField.title;
+    
+    [self.userLabel setTitle: userInput];
+    [self.button setTitle: @"Hi"];
+    
+    // 음성합성기로 소리도 들어보자
+    NSSpeechSynthesizer *speechSynth = [[NSSpeechSynthesizer alloc] init];
+    [speechSynth startSpeakingString: userInput];
+}
 @end
