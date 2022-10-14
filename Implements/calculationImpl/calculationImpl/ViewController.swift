@@ -7,88 +7,89 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-    
-    var nowCalculating: Bool = false
-    var curruntCalculator: String = ""
-    var userInput: String = ""
+final class ViewController: UIViewController {
 
-    @IBOutlet weak var userInputFirstField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    var userInput = ["","",""]
+    var onCalculating: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        configUserInputField()
-    }
-    
-    private func configUserInputField() {
-        userInputFirstField.isUserInteractionEnabled = false
-        userInputFirstField.keyboardType = .numberPad
-        userInputFirstField.text = ""
     }
     
     @IBAction func numberBtnTapped(_ sender: UIButton) {
-        guard let numberStr = sender.titleLabel?.text else { return }
-        if nowCalculating {
-            userInput += numberStr
-        } else {
-            userInput += numberStr
+        if let userNumber = sender.titleLabel?.text {
+            if !onCalculating {
+                userInput[0] += userNumber
+                resultLabel.text = userInput[0]
+            } else {
+                userInput[1] += userNumber
+                resultLabel.text = userInput[1]
+            }
+        }
+        print(#function, userInput)
+    }
+    
+    @IBAction func operatorBtnTapped(_ sender: UIButton) {
+        if let userOperator = sender.titleLabel?.text {
+            onCalculating = true
+            switch userOperator {
+            case "+":
+                userInput[2] = userOperator
+            case "-":
+                userInput[2] = userOperator
+            case "×":
+                userInput[2] = userOperator
+            case "÷":
+                userInput[2] = userOperator
+            case "=":
+                startCalculate()
+            // All Clear
+            case "AC":
+                print()
+                cancelCalculate()
+            case "+/-":
+                print()
+            case "%":
+                print()
+            default:
+                print()
+            }
         }
     }
     
-    @IBAction func calculateBtnTapped(_ sender: UIButton) {
-        guard let calculator = sender.titleLabel?.text else { return }
-        switch calculator {
+    private func cancelCalculate() {
+        userInput = ["","",""]
+        resultLabel.text = "0"
+        onCalculating = false
+    }
+    
+    private func startCalculate() {
+        let userOperator = userInput[2]
+        let lhs = userInput[0]
+        let rhs = userInput[1]
+        var result = ""
+        
+        switch userOperator {
         case "+":
-            nowCalculating = true
-            self.curruntCalculator = calculator
+            let tmp = Float(lhs)! + Float(rhs)!
+            result = String(tmp)
+            print(result)
         case "-":
-            nowCalculating = true
-            self.curruntCalculator = calculator
+            let tmp = Float(lhs)! - Float(rhs)!
+            result = String(tmp)
+            print(result)
         case "×":
-            nowCalculating = true
-            self.curruntCalculator = calculator
+            let tmp = Float(lhs)! * Float(rhs)!
+            result = String(tmp)
+            print(result)
         case "÷":
-            nowCalculating = true
-            self.curruntCalculator = calculator
-        case "=" :
-            print("Get result")
-//            resultLabel.text = doCalculate(userInput: userInputArr)
-            nowCalculating = false
-        case "←" :
-            if nowCalculating {
-                userInput.removeLast()
-            } else {
-                userInput.removeLast()
-            }
+            let tmp = Float(lhs)! / Float(rhs)!
+            result = String(tmp)
+            print(result)
         default:
-            dump("DEBUG: NO 연산자")
+            print("??")
         }
-    }
-    
-    // 텍스트필드 입력값이랑 연산자
-    func doCalculate(userInput: [String]) -> String {
-        switch self.curruntCalculator {
-        case "+":
-            print(#function)
-            let result = Int(userInput[0])! + Int(userInput[1])!
-            return String(result)
-        case "-":
-            let result = Int(userInput[0])! - Int(userInput[1])!
-            return String(result)
-        case "*":
-            let result = Int(userInput[0])! * Int(userInput[1])!
-            return String(result)
-        case "/":
-            if userInput[1] == "0" {
-                return "오류"
-            } else {
-                let result = Int(userInput[0])! / Int(userInput[1])!
-                return String(result)
-            }
-        default:
-            print()
-        }
-        return ""
+        resultLabel.text = result
     }
 }
-
