@@ -11,8 +11,10 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     @IBOutlet var window: NSWindow!
-
-
+    
+    @IBOutlet weak var mainLabel: NSTextFieldCell!
+    @IBOutlet weak var userInputField: NSTextFieldCell!
+    
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
     }
@@ -26,5 +28,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 
 
+    @IBAction func buttonTapped(_ sender: Any) {
+        mainLabel.title = userInputField.title
+        
+        let speechSynth = NSSpeechSynthesizer()
+        speechSynth.startSpeaking(userInputField.title)
+    }
 }
 
