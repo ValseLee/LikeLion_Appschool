@@ -7,8 +7,10 @@
 
 import UIKit
 
-final class ViewController: UIViewController {
-
+final class CalculatorViewController: UIViewController {
+    
+    let btnArray: [UIButton] = []
+    
     @IBOutlet weak var resultLabel: UILabel!
     var userInput = ["","",""]
     var onCalculating: Bool = false
