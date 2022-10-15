@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		700CACA728F8E4A2009570F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CACA628F8E4A2009570F5 /* AppDelegate.swift */; };
 		700CACA928F8E4A2009570F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CACA828F8E4A2009570F5 /* SceneDelegate.swift */; };
-		700CACAB28F8E4A2009570F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CACAA28F8E4A2009570F5 /* ViewController.swift */; };
+		700CACAB28F8E4A2009570F5 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CACAA28F8E4A2009570F5 /* CalculatorViewController.swift */; };
 		700CACAE28F8E4A2009570F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700CACAC28F8E4A2009570F5 /* Main.storyboard */; };
 		700CACB028F8E4A2009570F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700CACAF28F8E4A2009570F5 /* Assets.xcassets */; };
 		700CACB328F8E4A2009570F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 700CACB128F8E4A2009570F5 /* LaunchScreen.storyboard */; };
+		702F38F728FAE51400E9A893 /* IBHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702F38F628FAE51400E9A893 /* IBHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		700CACA328F8E4A2009570F5 /* calculationImpl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculationImpl.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700CACA628F8E4A2009570F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		700CACA828F8E4A2009570F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		700CACAA28F8E4A2009570F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		700CACAA28F8E4A2009570F5 /* CalculatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
 		700CACAD28F8E4A2009570F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		700CACAF28F8E4A2009570F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		700CACB228F8E4A2009570F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		700CACB428F8E4A2009570F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		702F38F628FAE51400E9A893 /* IBHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IBHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				700CACA628F8E4A2009570F5 /* AppDelegate.swift */,
 				700CACA828F8E4A2009570F5 /* SceneDelegate.swift */,
-				700CACAA28F8E4A2009570F5 /* ViewController.swift */,
+				700CACAA28F8E4A2009570F5 /* CalculatorViewController.swift */,
+				702F38F628FAE51400E9A893 /* IBHelpers.swift */,
 				700CACAC28F8E4A2009570F5 /* Main.storyboard */,
 				700CACAF28F8E4A2009570F5 /* Assets.xcassets */,
 				700CACB128F8E4A2009570F5 /* LaunchScreen.storyboard */,
@@ -138,7 +141,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				700CACAB28F8E4A2009570F5 /* ViewController.swift in Sources */,
+				702F38F728FAE51400E9A893 /* IBHelpers.swift in Sources */,
+				700CACAB28F8E4A2009570F5 /* CalculatorViewController.swift in Sources */,
 				700CACA728F8E4A2009570F5 /* AppDelegate.swift in Sources */,
 				700CACA928F8E4A2009570F5 /* SceneDelegate.swift in Sources */,
 			);

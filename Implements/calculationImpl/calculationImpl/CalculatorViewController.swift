@@ -8,28 +8,40 @@
 import UIKit
 
 final class CalculatorViewController: UIViewController {
-    
-    let btnArray: [UIButton] = []
-    
+
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var clearBtn: MyButton! {
+        didSet {
+            clearBtn.titleLabel?.textAlignment = .center
+        }
+    }
+    
     var userInput = ["","",""]
     var onCalculating: Bool = false
     
+    // MARK: Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
     @IBAction func numberBtnTapped(_ sender: UIButton) {
         if let userNumber = sender.titleLabel?.text {
-            if !onCalculating {
+            if userNumber == "." {
+                userInput[0] = "0"
+                resultLabel.text = userInput[0]
+            }
+            if userNumber == "0", resultLabel.text == "0" {
+                dump("DEBUG: Do Nothing, serial 0's")
+            } else if userNumber == ".", resultLabel.text == "." {
+                dump("DEBUG: Do Nothing, serial .'s")
+            } else if !onCalculating {
                 userInput[0] += userNumber
                 resultLabel.text = userInput[0]
-            } else {
+            } else if onCalculating {
                 userInput[1] += userNumber
                 resultLabel.text = userInput[1]
             }
         }
-        print(#function, userInput)
     }
     
     @IBAction func operatorBtnTapped(_ sender: UIButton) {
@@ -45,11 +57,13 @@ final class CalculatorViewController: UIViewController {
             case "÷":
                 userInput[2] = userOperator
             case "=":
-                startCalculate()
-            // All Clear
+                let result = startCalculate()
+                userInput[0] = result
+                userInput[1] = ""
+                onCalculating = false
             case "AC":
-                print()
-                cancelCalculate()
+                print("DEBUG: AC")
+                allClear()
             case "+/-":
                 print()
             case "%":
@@ -60,38 +74,55 @@ final class CalculatorViewController: UIViewController {
         }
     }
     
-    private func cancelCalculate() {
+    // MARK: Methods
+    private func allClear() {
         userInput = ["","",""]
         resultLabel.text = "0"
         onCalculating = false
     }
     
-    private func startCalculate() {
+    private func partialClear() {
+        // 계산기의 C는 대체 어떻게 작동하는걸까..?
+    }
+    
+    private func startCalculate() -> String {
         let userOperator = userInput[2]
         let lhs = userInput[0]
         let rhs = userInput[1]
         var result = ""
+        
+        defer {
+            if result == "" {
+                resultLabel.text = "0"
+            } else {
+                resultLabel.text = result
+            }
+        }
         
         switch userOperator {
         case "+":
             let tmp = Float(lhs)! + Float(rhs)!
             result = String(tmp)
             print(result)
+            return result
         case "-":
             let tmp = Float(lhs)! - Float(rhs)!
             result = String(tmp)
             print(result)
+            return result
         case "×":
             let tmp = Float(lhs)! * Float(rhs)!
             result = String(tmp)
             print(result)
+            return result
         case "÷":
             let tmp = Float(lhs)! / Float(rhs)!
             result = String(tmp)
             print(result)
+            return result
         default:
-            print("??")
+            print(#function, "??")
+            return result
         }
-        resultLabel.text = result
     }
 }
