@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import UIKit
+
+@IBDesignable final class MyButton: UIButton {
+    @IBInspectable var rounded: Bool = false {
+        didSet {
+            updateCornerRadius()
+        }
+    }
+    
+    private func updateCornerRadius() {
+        layer.cornerRadius = rounded ? frame.size.height / 2 : 0
+    }
+    
+}
