@@ -54,6 +54,7 @@
                                                 </buttonConfiguration>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="rounded" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="randomrandom" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="operatorBtnTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NsP-pR-hII"/>
