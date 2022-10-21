@@ -11,7 +11,7 @@ import SwiftUI
 struct PlayWithStacksApp: App {
     var body: some Scene {
         WindowGroup {
-            UpDownView()
+            UnderstandingState()
         }
     }
 }
