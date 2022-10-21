@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct UnderstandingState: View {
-    let color: [Color] = [
+    let colorArray: [Color] = [
         .red, .yellow, .gray, .blue, .pink, .purple, .brown, .indigo, .green, .orange, .teal
     ]
     
@@ -18,45 +18,54 @@ struct UnderstandingState: View {
         "돈까스",
         "마카롱",
         "불백",
-        "실비김치찜",
-        
+        "김치찜",
+        "파스타",
+        "피자",
+        "양꼬치",
+        "냉면"
     ]
     
-    @State private var userNumber: Int = 10
+    let radius: CGFloat = 150.0
+    
     @State private var isBtnPressed: Bool = false
-        
+    @Binding private var userNumber: Int
+    
     // 2 ~ 10
     var body: some View {
+        let menuNumber = userNumber + 2
         VStack {
             GeometryReader { geo in
                 let centerWidth: CGFloat = geo.size.width / 2
                 let centerHeight: CGFloat = geo.size.height / 2 - 20.0
                 
-                ForEach(1 ..< userNumber + 1) { index in
-                    let eachArcStartAngle = Double(360 / userNumber * index) + Double(360 % userNumber)
-                    let eachArcEndAngle = Double(360 / userNumber * (index - 1)) + Double(360 % (userNumber - 1))
-                    let middleAngle: Double = (eachArcStartAngle + eachArcEndAngle) / 2
-                    
-                    Path { path in
-                        path.move(to: CGPoint(x: centerWidth, y: centerHeight))
-                        path.addArc(center: .init(x: centerWidth, y: centerHeight),
-                                    radius: 150,
-                                    startAngle: Angle(degrees: eachArcStartAngle),
-                                    endAngle: Angle(degrees: eachArcEndAngle),
-                                    clockwise: true)
-                    }
-                    .fill(color[index - 1])
-                    .overlay {
-                        Text("Text")
-                        .offset(x: 150 * cos(middleAngle * Double.pi / 180),
-                             y: 150 * sin(middleAngle * Double.pi / 180) - 15)
-                    }
+                if menuNumber == 0 {
+                    MenuSelectStartView()
+                        .position(x: centerWidth, y: centerHeight)
+                } else { RouletteView(centerWidth: centerWidth, centerHeight: centerHeight,
+                                      radius: radius, colorArray: colorArray, menuArray: lunchMenuArray,
+                                      userNumber: menuNumber)
+                .overlay {
+                    Color.white.clipShape(Circle())
+                        .frame(width: CGFloat(radius / 6),
+                               height: CGFloat(radius / 6),
+                               alignment: .center)
+                        .position(x: centerWidth, y: centerHeight)
                 }
-            }.animation(Animation.easeInOut(duration: .infinity), value: isBtnPressed)
-            Button("돌리자") {
+                }
+            }
+            
+            Button {
                 isBtnPressed.toggle()
-                print("그래")
-            }.padding()
+            } label: {
+                isBtnPressed
+                ? Text("멈출래요")
+                : Text("돌릴래요")
+            }.padding(15)
+            Spacer()
         }
+    }
+    
+    init(userNumber: Binding<Int>) {
+        self._userNumber = userNumber
     }
 }
