@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		700634A62902527100B730A9 /* UnderstandingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700634A52902527100B730A9 /* UnderstandingState.swift */; };
+		7024DBCD2903972000EC0B64 /* AngleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7024DBCC2903972000EC0B64 /* AngleModel.swift */; };
 		7044C6942902DCF100B23ACB /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7044C6932902DCF100B23ACB /* RouletteView.swift */; };
 		70A1A95C2901026600200F67 /* UpDownView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A1A95B2901026600200F67 /* UpDownView.swift */; };
 		70C880B028FF9B160047D17E /* PlayWithStacksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C880AF28FF9B160047D17E /* PlayWithStacksApp.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		700634A52902527100B730A9 /* UnderstandingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingState.swift; sourceTree = "<group>"; };
+		7024DBCC2903972000EC0B64 /* AngleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleModel.swift; sourceTree = "<group>"; };
 		7044C6932902DCF100B23ACB /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
 		70A1A95B2901026600200F67 /* UpDownView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpDownView.swift; sourceTree = "<group>"; };
 		70C880AC28FF9B160047D17E /* PlayWithStacks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayWithStacks.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -46,6 +48,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7024DBCB2903970E00EC0B64 /* Roulette */ = {
+			isa = PBXGroup;
+			children = (
+				700634A52902527100B730A9 /* UnderstandingState.swift */,
+				7044C6932902DCF100B23ACB /* RouletteView.swift */,
+				7024DBCC2903972000EC0B64 /* AngleModel.swift */,
+				70C939BA2902F2680030A86E /* MenuSelectStartView.swift */,
+			);
+			path = Roulette;
+			sourceTree = "<group>";
+		};
 		70C880A328FF9B160047D17E = {
 			isa = PBXGroup;
 			children = (
@@ -65,15 +78,13 @@
 		70C880AE28FF9B160047D17E /* PlayWithStacks */ = {
 			isa = PBXGroup;
 			children = (
+				7024DBCB2903970E00EC0B64 /* Roulette */,
 				70C880AF28FF9B160047D17E /* PlayWithStacksApp.swift */,
 				70C880B128FF9B160047D17E /* ContentView.swift */,
 				70C880C1290026100047D17E /* ButtonView.swift */,
 				70C880C3290030520047D17E /* TextLineMaximumView.swift */,
 				70C880BD28FFD1890047D17E /* StateExampleView.swift */,
 				70A1A95B2901026600200F67 /* UpDownView.swift */,
-				700634A52902527100B730A9 /* UnderstandingState.swift */,
-				7044C6932902DCF100B23ACB /* RouletteView.swift */,
-				70C939BA2902F2680030A86E /* MenuSelectStartView.swift */,
 				70C880B328FF9B170047D17E /* Assets.xcassets */,
 				70C880B528FF9B170047D17E /* Preview Content */,
 			);
@@ -161,6 +172,7 @@
 				70C880B228FF9B160047D17E /* ContentView.swift in Sources */,
 				70A1A95C2901026600200F67 /* UpDownView.swift in Sources */,
 				70C880B028FF9B160047D17E /* PlayWithStacksApp.swift in Sources */,
+				7024DBCD2903972000EC0B64 /* AngleModel.swift in Sources */,
 				70C880C2290026100047D17E /* ButtonView.swift in Sources */,
 				7044C6942902DCF100B23ACB /* RouletteView.swift in Sources */,
 				70C880C4290030520047D17E /* TextLineMaximumView.swift in Sources */,
