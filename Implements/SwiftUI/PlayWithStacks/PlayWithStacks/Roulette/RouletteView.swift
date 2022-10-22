@@ -7,46 +7,55 @@
 
 import SwiftUI
 
-struct RouletteView: View, Hashable {
+struct RouletteView: View {
     let centerWidth: CGFloat
     let centerHeight: CGFloat
-//    let eachArcStartAngle: Double
-//    let eachArcEndAngle: Double
     let radius: CGFloat
     let colorArray: [Color]
     let userNumber: Int
     let menuArray: [String]
+    let angleManager = AngleModel()
     
     var body: some View {
-        ForEach(1 ..< userNumber + 1) { index in
-            let arcStartPosition = Double(360 / userNumber * index)
-            let arcEndPosition = Double(360 / userNumber * (index - 1))
+        let userNumberArray: [Int] = Array(1 ..< userNumber + 1)
+        
+        ForEach(userNumberArray, id: \.self) { index in
+            let eachArcStartAngle = angleManager.getEachAngle(isStart: true,
+                                                              userNumber: userNumber, index: index)
+            let eachArcEndAngle = angleManager.getEachAngle(isStart: false,
+                                                            userNumber: userNumber, index: index)
             
-            let startAngleRest = Double(360 % userNumber)
-            let endAngleRest = Double(360 % (userNumber - 1))
-            
-            let eachArcStartAngle: Double = arcStartPosition
-            let eachArcEndAngle: Double = arcEndPosition
             let middleAngle: Double = (eachArcStartAngle + eachArcEndAngle) / 2
 
-            Path { path in
+            let roulettePath = Path { path in
                 path.move(to: CGPoint(x: centerWidth, y: centerHeight))
                 path.addArc(center: .init(x: centerWidth, y: centerHeight),
                             radius: radius,
                             startAngle: Angle(degrees: eachArcStartAngle),
                             endAngle: Angle(degrees: eachArcEndAngle),
                             clockwise: true)
+                path.closeSubpath()
+                print(#function, eachArcStartAngle, eachArcEndAngle, 270.0, menuArray[index - 1])
             }
-            .fill(colorArray.shuffled()[index - 1])
-            .overlay {
+            roulettePath
+                .fill(colorArray[index - 1])
+                .overlay {
+                roulettePath.stroke(Color.black, lineWidth: 1)
+                    
                 Image(systemName: "triangle.fill")
                     .rotationEffect(Angle(degrees: 180))
-                    .position(x: centerWidth, y: centerHeight - radius)
-                Text("\(menuArray.shuffled()[index - 1])")
-                    .rotationEffect(Angle(degrees: 15.0))
+                    .position(x: centerWidth, y: centerHeight - 150)
+
+                Text("\(menuArray[index - 1])")
+                    .rotationEffect(Angle(degrees: 10.0))
                     .offset(x: radius / 1.25 * cos(middleAngle * Double.pi / 180) - 5,
                             y: radius / 1.25 * sin(middleAngle * Double.pi / 180) - 15)
             }
+            let menuIndex = angleManager.getEachRouletteItem(angles: [eachArcStartAngle, eachArcEndAngle], movesFor: 0.0, index: index)
+            
+            Text("\(menuArray[menuIndex])")
+                .font(.title)
+                .position(x: centerWidth, y: centerHeight - (radius * 1.3))
         }
     }
     
@@ -59,9 +68,5 @@ struct RouletteView: View, Hashable {
         self.colorArray = colorArray
         self.userNumber = userNumber
         self.menuArray = menuArray
-//        eachArcStartAngle: Double, eachArcEndAngle: Double,
-//        self.eachArcStartAngle = eachArcStartAngle
-//        self.eachArcEndAngle = eachArcEndAngle
     }
 }
-

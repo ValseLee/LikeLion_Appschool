@@ -41,16 +41,23 @@ struct UnderstandingState: View {
                 if menuNumber == 0 {
                     MenuSelectStartView()
                         .position(x: centerWidth, y: centerHeight)
-                } else { RouletteView(centerWidth: centerWidth, centerHeight: centerHeight,
-                                      radius: radius, colorArray: colorArray, menuArray: lunchMenuArray,
-                                      userNumber: menuNumber)
-                .overlay {
-                    Color.white.clipShape(Circle())
-                        .frame(width: CGFloat(radius / 6),
-                               height: CGFloat(radius / 6),
-                               alignment: .center)
-                        .position(x: centerWidth, y: centerHeight)
-                }
+                } else {
+                    ZStack {
+                        RouletteView(centerWidth: centerWidth, centerHeight: centerHeight,
+                                     radius: radius, colorArray: colorArray, menuArray: lunchMenuArray,
+                                     userNumber: menuNumber)
+                        .overlay {
+                            ZStack {
+                                Color.white
+                                    .clipShape(Circle())
+                                Circle()
+                                    .stroke(Color.black, lineWidth: 1.0)
+                            }.frame(width: CGFloat(radius / 6),
+                                    height: CGFloat(radius / 6),
+                                    alignment: .center)
+                            .position(x: centerWidth ,y: centerHeight)
+                        }
+                    }
                 }
             }
             
@@ -67,5 +74,11 @@ struct UnderstandingState: View {
     
     init(userNumber: Binding<Int>) {
         self._userNumber = userNumber
+    }
+}
+
+extension UnderstandingState: Equatable {
+    static func == (lhs: UnderstandingState, rhs: UnderstandingState) -> Bool {
+        return lhs.userNumber.self == rhs.userNumber.self
     }
 }

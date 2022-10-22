@@ -26,9 +26,9 @@ struct MenuSelectStartView: View {
                 Text("후보 메뉴 \(menuNumber + 2)개로 \n메뉴판을 생성할까요?")
                     .font(.body)
                     .multilineTextAlignment(.center)
-                
                 NavigationLink {
                     UnderstandingState(userNumber: $menuNumber)
+                        .equatable()
                 } label: {
                     Text("그럽시다")
                 }
