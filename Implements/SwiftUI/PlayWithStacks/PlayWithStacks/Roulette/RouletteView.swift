@@ -19,8 +19,14 @@ struct RouletteView: View, Hashable {
     
     var body: some View {
         ForEach(1 ..< userNumber + 1) { index in
-            let eachArcStartAngle: Double = Double(360 / userNumber * index) + Double(360 % userNumber)
-            let eachArcEndAngle: Double = Double(360 / userNumber * (index - 1)) + Double(360 % (userNumber - 1))
+            let arcStartPosition = Double(360 / userNumber * index)
+            let arcEndPosition = Double(360 / userNumber * (index - 1))
+            
+            let startAngleRest = Double(360 % userNumber)
+            let endAngleRest = Double(360 % (userNumber - 1))
+            
+            let eachArcStartAngle: Double = arcStartPosition
+            let eachArcEndAngle: Double = arcEndPosition
             let middleAngle: Double = (eachArcStartAngle + eachArcEndAngle) / 2
 
             Path { path in
@@ -35,7 +41,7 @@ struct RouletteView: View, Hashable {
             .overlay {
                 Image(systemName: "triangle.fill")
                     .rotationEffect(Angle(degrees: 180))
-                    .position(x: centerWidth, y: centerHeight - 150)
+                    .position(x: centerWidth, y: centerHeight - radius)
                 Text("\(menuArray.shuffled()[index - 1])")
                     .rotationEffect(Angle(degrees: 15.0))
                     .offset(x: radius / 1.25 * cos(middleAngle * Double.pi / 180) - 5,
