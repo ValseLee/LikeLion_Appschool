@@ -31,14 +31,7 @@ struct AngleModel {
     // 애니메이션을 돌려서 움직인 각도만큼을 더함
     // 움직인 각도를 360로 나눠지지 않을 때까지 나눈 뒤, 나머지를 구함
     // 그 나머지 각도의 끝에 화살표가 갖는 각도 270도 인 메뉴를 보여주면 된다.
-    public func getEachRouletteItem(angles: [Double], movesFor: Double, index: Int) -> Int {
-        let angleResult = angles.map { $0 + movesFor }.sorted()
+    public func getRouletteMenu(angles: [Double], movesFor: Double, index: Int) {
         
-        switch 270.0 {
-        case angleResult.first! ... angleResult.last!:
-            return index - 1
-        default:
-            return 0
-        }
     }
 }

@@ -27,48 +27,33 @@ struct UnderstandingState: View {
     
     let radius: CGFloat = 150.0
     
-    @State private var isBtnPressed: Bool = false
     @Binding private var userNumber: Int
     
     // 2 ~ 10
     var body: some View {
         let menuNumber = userNumber + 2
+        
         VStack {
             GeometryReader { geo in
                 let centerWidth: CGFloat = geo.size.width / 2
                 let centerHeight: CGFloat = geo.size.height / 2 - 20.0
                 
-                if menuNumber == 0 {
-                    MenuSelectStartView()
-                        .position(x: centerWidth, y: centerHeight)
-                } else {
-                    ZStack {
-                        RouletteView(centerWidth: centerWidth, centerHeight: centerHeight,
-                                     radius: radius, colorArray: colorArray, menuArray: lunchMenuArray,
-                                     userNumber: menuNumber)
-                        .overlay {
-                            ZStack {
-                                Color.white
-                                    .clipShape(Circle())
-                                Circle()
-                                    .stroke(Color.black, lineWidth: 1.0)
-                            }.frame(width: CGFloat(radius / 6),
-                                    height: CGFloat(radius / 6),
-                                    alignment: .center)
-                            .position(x: centerWidth ,y: centerHeight)
-                        }
+                ZStack {
+                    let _ = print("1")
+                    
+                    RouletteView(centerWidth: centerWidth, centerHeight: centerHeight,
+                                 radius: radius, colorArray: colorArray, menuArray: lunchMenuArray,
+                                 userNumber: menuNumber)
+                    .onAppear {
+                        print(TimeZone.current)
                     }
+                    
+                    Circle()
+                        .foregroundColor(.white)
+                        .frame(width: 20, height: 20)
+                        .position(x: centerWidth, y: centerHeight)
                 }
             }
-            
-            Button {
-                isBtnPressed.toggle()
-            } label: {
-                isBtnPressed
-                ? Text("멈출래요")
-                : Text("돌릴래요")
-            }.padding(15)
-            Spacer()
         }
     }
     

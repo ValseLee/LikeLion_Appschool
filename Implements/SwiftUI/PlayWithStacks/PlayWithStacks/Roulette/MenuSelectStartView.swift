@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct MenuSelectStartView: View {
-    @State private var menuNumber = 0
-    @State private var navPath = NavigationPath()
+    @State private var menuNumber: Int = 0
     
     var body: some View {
         NavigationView {
@@ -28,7 +27,6 @@ struct MenuSelectStartView: View {
                     .multilineTextAlignment(.center)
                 NavigationLink {
                     UnderstandingState(userNumber: $menuNumber)
-                        .equatable()
                 } label: {
                     Text("그럽시다")
                 }
@@ -38,9 +36,4 @@ struct MenuSelectStartView: View {
     }
 }
 
-struct MenuSelectStartView_Previews: PreviewProvider {
-    static var previews: some View {
-        MenuSelectStartView()
-    }
-}
 
