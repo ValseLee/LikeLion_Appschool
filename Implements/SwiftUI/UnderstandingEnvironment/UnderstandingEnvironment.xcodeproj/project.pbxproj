@@ -7,18 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7004CCA7290631E80002FB58 /* TimerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCA6290631E80002FB58 /* TimerObject.swift */; };
+		7004CCA92906336B0002FB58 /* SecondTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCA82906336B0002FB58 /* SecondTimerView.swift */; };
+		7004CCAB29064A6A0002FB58 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCAA29064A6A0002FB58 /* OtherView.swift */; };
+		7004CCB0290665340002FB58 /* MenuGameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCAF290665340002FB58 /* MenuGameStartView.swift */; };
+		7004CCB22906671D0002FB58 /* FirstRouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB12906671D0002FB58 /* FirstRouletteView.swift */; };
+		7004CCB4290667620002FB58 /* FirstRouletteBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB3290667620002FB58 /* FirstRouletteBoard.swift */; };
+		7004CCB6290668160002FB58 /* SecondRouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB5290668160002FB58 /* SecondRouletteView.swift */; };
+		7004CCB8290668F60002FB58 /* SecondRouletteBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB7290668F60002FB58 /* SecondRouletteBoard.swift */; };
+		7004CCBB29066BB20002FB58 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCBA29066BB20002FB58 /* MenuData.swift */; };
 		706A761629061387003C5194 /* UnderstandingEnvironmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A761529061387003C5194 /* UnderstandingEnvironmentApp.swift */; };
-		706A761829061387003C5194 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A761729061387003C5194 /* ContentView.swift */; };
+		706A761829061387003C5194 /* FirstTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A761729061387003C5194 /* FirstTimeView.swift */; };
 		706A761A29061387003C5194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706A761929061387003C5194 /* Assets.xcassets */; };
 		706A761D29061387003C5194 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706A761C29061387003C5194 /* Preview Assets.xcassets */; };
+		708A87A62906BF5E0086A0F6 /* ResultHIstoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708A87A52906BF5E0086A0F6 /* ResultHIstoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7004CCA6290631E80002FB58 /* TimerObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerObject.swift; sourceTree = "<group>"; };
+		7004CCA82906336B0002FB58 /* SecondTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTimerView.swift; sourceTree = "<group>"; };
+		7004CCAA29064A6A0002FB58 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
+		7004CCAF290665340002FB58 /* MenuGameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGameStartView.swift; sourceTree = "<group>"; };
+		7004CCB12906671D0002FB58 /* FirstRouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRouletteView.swift; sourceTree = "<group>"; };
+		7004CCB3290667620002FB58 /* FirstRouletteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstRouletteBoard.swift; path = UnderstandingEnvironment/DoubleRoulette/Views/FirstRouletteBoard.swift; sourceTree = SOURCE_ROOT; };
+		7004CCB5290668160002FB58 /* SecondRouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRouletteView.swift; sourceTree = "<group>"; };
+		7004CCB7290668F60002FB58 /* SecondRouletteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRouletteBoard.swift; sourceTree = "<group>"; };
+		7004CCBA29066BB20002FB58 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
 		706A761229061387003C5194 /* UnderstandingEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderstandingEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706A761529061387003C5194 /* UnderstandingEnvironmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingEnvironmentApp.swift; sourceTree = "<group>"; };
-		706A761729061387003C5194 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		706A761729061387003C5194 /* FirstTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeView.swift; sourceTree = "<group>"; };
 		706A761929061387003C5194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706A761C29061387003C5194 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		708A87A52906BF5E0086A0F6 /* ResultHIstoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultHIstoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +52,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7004CCAC29064EB00002FB58 /* EnvironmentExample */ = {
+			isa = PBXGroup;
+			children = (
+				706A761729061387003C5194 /* FirstTimeView.swift */,
+				7004CCA82906336B0002FB58 /* SecondTimerView.swift */,
+				7004CCAA29064A6A0002FB58 /* OtherView.swift */,
+				7004CCA6290631E80002FB58 /* TimerObject.swift */,
+			);
+			path = EnvironmentExample;
+			sourceTree = "<group>";
+		};
+		7004CCAE2906647C0002FB58 /* DoubleRoulette */ = {
+			isa = PBXGroup;
+			children = (
+				706A761529061387003C5194 /* UnderstandingEnvironmentApp.swift */,
+				7004CCB929066BA60002FB58 /* Model */,
+				708A87A42906B0840086A0F6 /* Views */,
+			);
+			path = DoubleRoulette;
+			sourceTree = "<group>";
+		};
+		7004CCB929066BA60002FB58 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7004CCBA29066BB20002FB58 /* MenuData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		706A760929061386003C5194 = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +100,8 @@
 		706A761429061387003C5194 /* UnderstandingEnvironment */ = {
 			isa = PBXGroup;
 			children = (
-				706A761529061387003C5194 /* UnderstandingEnvironmentApp.swift */,
-				706A761729061387003C5194 /* ContentView.swift */,
+				7004CCAE2906647C0002FB58 /* DoubleRoulette */,
+				7004CCAC29064EB00002FB58 /* EnvironmentExample */,
 				706A761929061387003C5194 /* Assets.xcassets */,
 				706A761B29061387003C5194 /* Preview Content */,
 			);
@@ -65,6 +114,19 @@
 				706A761C29061387003C5194 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		708A87A42906B0840086A0F6 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7004CCAF290665340002FB58 /* MenuGameStartView.swift */,
+				7004CCB12906671D0002FB58 /* FirstRouletteView.swift */,
+				7004CCB3290667620002FB58 /* FirstRouletteBoard.swift */,
+				7004CCB5290668160002FB58 /* SecondRouletteView.swift */,
+				7004CCB7290668F60002FB58 /* SecondRouletteBoard.swift */,
+				708A87A52906BF5E0086A0F6 /* ResultHIstoryView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +199,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				706A761829061387003C5194 /* ContentView.swift in Sources */,
+				706A761829061387003C5194 /* FirstTimeView.swift in Sources */,
+				7004CCA7290631E80002FB58 /* TimerObject.swift in Sources */,
+				708A87A62906BF5E0086A0F6 /* ResultHIstoryView.swift in Sources */,
+				7004CCB22906671D0002FB58 /* FirstRouletteView.swift in Sources */,
+				7004CCA92906336B0002FB58 /* SecondTimerView.swift in Sources */,
+				7004CCB0290665340002FB58 /* MenuGameStartView.swift in Sources */,
+				7004CCB6290668160002FB58 /* SecondRouletteView.swift in Sources */,
 				706A761629061387003C5194 /* UnderstandingEnvironmentApp.swift in Sources */,
+				7004CCB8290668F60002FB58 /* SecondRouletteBoard.swift in Sources */,
+				7004CCB4290667620002FB58 /* FirstRouletteBoard.swift in Sources */,
+				7004CCBB29066BB20002FB58 /* MenuData.swift in Sources */,
+				7004CCAB29064A6A0002FB58 /* OtherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
