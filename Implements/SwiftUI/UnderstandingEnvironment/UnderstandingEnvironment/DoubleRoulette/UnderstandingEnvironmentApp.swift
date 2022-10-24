@@ -16,7 +16,7 @@ struct UnderstandingEnvironmentApp: App {
     var body: some Scene {
         WindowGroup {
             // 초기화된 ObservableObject의 인스턴스를 생성자로 전달
-            FirstTimeView()
+            StartView()
 				.environmentObject(timer)
         }
     }

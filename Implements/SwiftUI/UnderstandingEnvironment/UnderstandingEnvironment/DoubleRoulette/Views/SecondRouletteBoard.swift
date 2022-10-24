@@ -1,5 +1,5 @@
 //
-//  FirstRouletteBoard.swift
+//  SecondRouletteBoard.swift
 //  UnderstandingEnvironment
 //
 //  Created by 이승준 on 2022/10/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct FirstRouletteBoard : View {
+struct SecondRouletteBoard : View {
 	
 	@Binding var userNumber: Int
 	@Binding var rotation: Int
