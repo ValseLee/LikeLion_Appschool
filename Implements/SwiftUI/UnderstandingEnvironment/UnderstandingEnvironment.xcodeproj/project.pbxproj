@@ -11,11 +11,9 @@
 		7004CCA92906336B0002FB58 /* SecondTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCA82906336B0002FB58 /* SecondTimerView.swift */; };
 		7004CCAB29064A6A0002FB58 /* OtherView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCAA29064A6A0002FB58 /* OtherView.swift */; };
 		7004CCB0290665340002FB58 /* MenuGameStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCAF290665340002FB58 /* MenuGameStartView.swift */; };
-		7004CCB22906671D0002FB58 /* FirstRouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB12906671D0002FB58 /* FirstRouletteView.swift */; };
-		7004CCB4290667620002FB58 /* FirstRouletteBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB3290667620002FB58 /* FirstRouletteBoard.swift */; };
-		7004CCB6290668160002FB58 /* SecondRouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB5290668160002FB58 /* SecondRouletteView.swift */; };
-		7004CCB8290668F60002FB58 /* SecondRouletteBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB7290668F60002FB58 /* SecondRouletteBoard.swift */; };
-		7004CCBB29066BB20002FB58 /* MenuData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCBA29066BB20002FB58 /* MenuData.swift */; };
+		7004CCB22906671D0002FB58 /* RouletteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB12906671D0002FB58 /* RouletteView.swift */; };
+		7004CCB4290667620002FB58 /* RouletteBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCB3290667620002FB58 /* RouletteBoard.swift */; };
+		7004CCBB29066BB20002FB58 /* MenuInformationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7004CCBA29066BB20002FB58 /* MenuInformationModel.swift */; };
 		706A761629061387003C5194 /* UnderstandingEnvironmentApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A761529061387003C5194 /* UnderstandingEnvironmentApp.swift */; };
 		706A761829061387003C5194 /* FirstTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A761729061387003C5194 /* FirstTimeView.swift */; };
 		706A761A29061387003C5194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706A761929061387003C5194 /* Assets.xcassets */; };
@@ -28,11 +26,9 @@
 		7004CCA82906336B0002FB58 /* SecondTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTimerView.swift; sourceTree = "<group>"; };
 		7004CCAA29064A6A0002FB58 /* OtherView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherView.swift; sourceTree = "<group>"; };
 		7004CCAF290665340002FB58 /* MenuGameStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuGameStartView.swift; sourceTree = "<group>"; };
-		7004CCB12906671D0002FB58 /* FirstRouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstRouletteView.swift; sourceTree = "<group>"; };
-		7004CCB3290667620002FB58 /* FirstRouletteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FirstRouletteBoard.swift; path = UnderstandingEnvironment/DoubleRoulette/Views/FirstRouletteBoard.swift; sourceTree = SOURCE_ROOT; };
-		7004CCB5290668160002FB58 /* SecondRouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRouletteView.swift; sourceTree = "<group>"; };
-		7004CCB7290668F60002FB58 /* SecondRouletteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondRouletteBoard.swift; sourceTree = "<group>"; };
-		7004CCBA29066BB20002FB58 /* MenuData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuData.swift; sourceTree = "<group>"; };
+		7004CCB12906671D0002FB58 /* RouletteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouletteView.swift; sourceTree = "<group>"; };
+		7004CCB3290667620002FB58 /* RouletteBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RouletteBoard.swift; path = UnderstandingEnvironment/DoubleRoulette/Views/RouletteBoard.swift; sourceTree = SOURCE_ROOT; };
+		7004CCBA29066BB20002FB58 /* MenuInformationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuInformationModel.swift; sourceTree = "<group>"; };
 		706A761229061387003C5194 /* UnderstandingEnvironment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderstandingEnvironment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		706A761529061387003C5194 /* UnderstandingEnvironmentApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingEnvironmentApp.swift; sourceTree = "<group>"; };
 		706A761729061387003C5194 /* FirstTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeView.swift; sourceTree = "<group>"; };
@@ -76,7 +72,7 @@
 		7004CCB929066BA60002FB58 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7004CCBA29066BB20002FB58 /* MenuData.swift */,
+				7004CCBA29066BB20002FB58 /* MenuInformationModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -120,10 +116,8 @@
 			isa = PBXGroup;
 			children = (
 				7004CCAF290665340002FB58 /* MenuGameStartView.swift */,
-				7004CCB12906671D0002FB58 /* FirstRouletteView.swift */,
-				7004CCB3290667620002FB58 /* FirstRouletteBoard.swift */,
-				7004CCB5290668160002FB58 /* SecondRouletteView.swift */,
-				7004CCB7290668F60002FB58 /* SecondRouletteBoard.swift */,
+				7004CCB12906671D0002FB58 /* RouletteView.swift */,
+				7004CCB3290667620002FB58 /* RouletteBoard.swift */,
 				708A87A52906BF5E0086A0F6 /* ResultHIstoryView.swift */,
 			);
 			path = Views;
@@ -202,14 +196,12 @@
 				706A761829061387003C5194 /* FirstTimeView.swift in Sources */,
 				7004CCA7290631E80002FB58 /* TimerObject.swift in Sources */,
 				708A87A62906BF5E0086A0F6 /* ResultHIstoryView.swift in Sources */,
-				7004CCB22906671D0002FB58 /* FirstRouletteView.swift in Sources */,
+				7004CCB22906671D0002FB58 /* RouletteView.swift in Sources */,
 				7004CCA92906336B0002FB58 /* SecondTimerView.swift in Sources */,
 				7004CCB0290665340002FB58 /* MenuGameStartView.swift in Sources */,
-				7004CCB6290668160002FB58 /* SecondRouletteView.swift in Sources */,
 				706A761629061387003C5194 /* UnderstandingEnvironmentApp.swift in Sources */,
-				7004CCB8290668F60002FB58 /* SecondRouletteBoard.swift in Sources */,
-				7004CCB4290667620002FB58 /* FirstRouletteBoard.swift in Sources */,
-				7004CCBB29066BB20002FB58 /* MenuData.swift in Sources */,
+				7004CCB4290667620002FB58 /* RouletteBoard.swift in Sources */,
+				7004CCBB29066BB20002FB58 /* MenuInformationModel.swift in Sources */,
 				7004CCAB29064A6A0002FB58 /* OtherView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
