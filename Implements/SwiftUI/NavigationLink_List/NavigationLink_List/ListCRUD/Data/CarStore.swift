@@ -8,3 +8,10 @@
 import SwiftUI
 import Combine
 
+final class CarStore: ObservableObject {
+	@Published var cars: [Car]
+	
+	init(cars: [Car] = []) {
+		self.cars = cars
+	}
+}

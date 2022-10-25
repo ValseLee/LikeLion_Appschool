@@ -8,9 +8,31 @@
 import SwiftUI
 
 struct CarView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	var body: some View {
+		
+		NavigationView {
+			VStack {
+				Text("?")
+			}
+			.navigationTitle(Text("EV Cars"))
+			.toolbar {
+				ToolbarItem(placement: .navigationBarLeading) {
+					
+					NavigationLink(destination: Text("?"), label: {
+						Text("Add")
+					})
+				}
+				
+				ToolbarItem(placement: .navigationBarTrailing) {
+					EditButton()
+				}
+			}
+		}
+	}
+	
+	func moveItems(from source: IndexSet, to destination: Int) {
+		print(source, destination)
+	}
 }
 
 struct CarView_Previews: PreviewProvider {
