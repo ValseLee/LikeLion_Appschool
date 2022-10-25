@@ -7,14 +7,18 @@
 
 import SwiftUI
 
-struct SecondRouletteView: View {
-	@ObservedObject var menuData: MenuData
+struct RouletteView: View {
+	@ObservedObject var menuData: MenuInformationModel
+	
+	let rouletteTitle: String
+	let rouletteStartButtonText: String
+	let isLunch: Bool
 	
 	var body: some View {
 		VStack() {
 			Spacer()
 			
-			Text("돌려 돌려\n저메추 돌림판 ~ ! ")
+			Text("\(rouletteTitle)")
 				.font(.largeTitle)
 				.fontWeight(.black)
 				.foregroundColor(.pink)
@@ -27,14 +31,13 @@ struct SecondRouletteView: View {
 					}
 				})
 			
-			SecondRouletteBoard(menuData: menuData)
-
+			RouletteBoard(menuData: menuData, isLunch: isLunch)
+			
 			Stepper(value: $menuData.userNumber, in: 2...10, step: 1) {
 				Text("메뉴 \(menuData.userNumber)개 선택")
 			}
 			.frame(width: 240.0)
 			.padding()
-
 			
 			Button(action: {
 				menuData.resultTextOpacity = 0.0
@@ -44,7 +47,7 @@ struct SecondRouletteView: View {
 					menuData.resultTextOpacity = 1.0
 				}
 			}) {
-				Text("저녁 뭐먹지?👅")
+				Text("\(self.rouletteStartButtonText)")
 					.frame(width: 150.0, height: 30.0)
 			}
 			.buttonStyle(.borderedProminent)

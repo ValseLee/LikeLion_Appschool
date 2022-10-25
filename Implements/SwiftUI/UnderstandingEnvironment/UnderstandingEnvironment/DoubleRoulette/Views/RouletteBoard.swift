@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct FirstRouletteBoard: View {
-	@ObservedObject var menuData: MenuData
-	let lunchDictionaryKey: String = "Lunch"
+struct RouletteBoard: View {
+	@ObservedObject var menuData: MenuInformationModel
 	
+	let dictionaryKey: String
 	var color: [Color] = [
 		.red, .yellow, .gray, .blue, .pink, .purple, .brown, .indigo, .green, .orange, .teal
 	]
@@ -41,7 +41,7 @@ struct FirstRouletteBoard: View {
 					.overlay {
 						let textWidthPosition: Double = 100 * cos(middleAngle * Double.pi / 180)
 						let textHeightPosition: Double = 100 * sin(middleAngle * Double.pi / 180)
-						Text(menuData.menuDictionary[lunchDictionaryKey]![index - 1])
+						Text(menuData.menuDictionary[dictionaryKey]![index - 1])
 							.offset(x: textWidthPosition,
 									y: textHeightPosition)
 					}
@@ -62,18 +62,23 @@ struct FirstRouletteBoard: View {
 					.overlay {
 						let index = menuData.getCurrentIndex(rotation: menuData.rotation,
 															 userNumber: menuData.userNumber)
-						let menuResult = menuData.menuDictionary[lunchDictionaryKey]![index]
+						let menuResult = menuData.menuDictionary[dictionaryKey]![index]
 						Text(menuResult)
 							.opacity(menuData.resultTextOpacity)
 							.onDisappear {
 								if menuData.isPlayed {
 									menuData.menuResultListUpdate(menuName: menuResult,
-																  mealTime: lunchDictionaryKey)
+																  mealTime: dictionaryKey)
 								}
 								menuData.resetData()
 							}
 					}
 			}
 		}
+	}
+	
+	init(menuData: MenuInformationModel, isLunch: Bool) {
+		self.dictionaryKey = isLunch ? "Lunch" : "Dinner"
+		self.menuData = menuData
 	}
 }

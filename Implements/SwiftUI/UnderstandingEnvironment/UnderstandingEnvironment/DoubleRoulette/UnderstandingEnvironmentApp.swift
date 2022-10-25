@@ -13,7 +13,7 @@ struct UnderstandingEnvironmentApp: App {
     // 뷰를 초기화하기 전, ObservableObject 초기화
     let timer = TimerObject()
 	
-	let menuData = MenuData()
+	let menuData = MenuInformationModel()
     
     var body: some Scene {
         WindowGroup {

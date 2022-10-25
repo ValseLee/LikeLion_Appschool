@@ -8,36 +8,47 @@
 import SwiftUI
 
 struct ResultHIstoryView: View {
-	@ObservedObject var menuData: MenuData
+	@ObservedObject var menuData: MenuInformationModel
 	
-    var body: some View {
-		let resultList = menuData.menuResultList
-		
-		VStack {
-			Text("최근 5회 추첨 결과")
-				.font(.largeTitle)
-			Spacer()
-			
-			ForEach(1 ..< resultList.count, id: \.self) { index in
-				switch index {
-				case resultList.count - 5 ... resultList.count:
-					Text("\(resultList[index])")
-						.modifier(ResultTextModifier())
-						.padding()
-				default:
+	var body: some View {
+		List {
+			if menuData.menuResultList.count == 1 {
+				Section(content: {
 					EmptyView()
-				}
+				}, header: {
+					Text("\(menuData.menuResultList[0])")
+						.modifier(ResultTextModifier())
+						.padding(25)
+				})
+			} else {
+				ForEach(1 ..< menuData.menuResultList.count, id: \.self) { index in
+					HStack {
+						Spacer()
+						VStack(alignment: .center) {
+							menuData.menuImageList[index]
+								.resizable()
+								.aspectRatio(1, contentMode: .fit)
+								.frame(width: 300, height: 300)
+								.padding(.top, 15)
+							Spacer()
+							Text("\(menuData.menuResultList[index])")
+						}
+						Spacer()
+					}
+				}.onDelete(perform: { index in
+					menuData.menuResultList.remove(atOffsets: index)
+				})
+				.navigationTitle("결과 히스토리")
 			}
-			Spacer()
 		}
-		
-    }
+		Spacer()
+	}
 }
 
 struct ResultTextModifier: ViewModifier {
 	func body(content: Content) -> some View {
 		content
-			.frame(width: 250, height: 75)
+			.frame(minWidth: 275, minHeight: 75)
 			.font(.title3)
 			.background(Color.black)
 			.foregroundColor(.white)

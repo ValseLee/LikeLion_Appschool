@@ -6,24 +6,25 @@
 //
 
 import Foundation
+import SwiftUI
 import Combine
 
-final class MenuData: ObservableObject {
+final class MenuInformationModel: ObservableObject {
 	@Published var userNumber: Int = 10
 	@Published var rotation: Int = 0
 	@Published var titleTextOpacity: CGFloat = 0.0
 	@Published var resultTextOpacity: CGFloat = 0.0
+	@Published var menuResultList: [String] = ["아직 메뉴를 고르지 않았군요!"]
+	@Published var menuImageList: [Image] = [Image(systemName: "sun.max.fill")]
 	
 	public var isPlayed: Bool = false
 	
 	public let menuDictionary: [String: [String]] = [
 		"Lunch" :
-			["부대찌개", "돈까스", "불백", "김치찜", "마카롱", "육개장", "짜장면", "초밥", "스파게티", "삼겹살"],
+			["부대찌개", "돈까쓰", "불백", "김치찜", "마카롱", "육개장", "짜장면", "초밥", "스파게티", "삼겹살"],
 		"Dinner" :
 			["해물탕", "라멘", "탕수육", "파스타", "피자", "김피탕", "돼지국밥", "선지국", "감자탕", "초콜렛"]
 	]
-	
-	public var menuResultList: [String] = ["아직 메뉴를 고르지 않았군요!"]
 	
 	public func resetData() {
 		userNumber = 10
@@ -35,6 +36,7 @@ final class MenuData: ObservableObject {
 	
 	public func menuResultListUpdate(menuName: String, mealTime: String) {
 		let result = "\(menuResultList.count)회차 " + "\(mealTime) 메뉴 : " + menuName
+		self.menuImageList.append(Image(menuName))
 		self.menuResultList.append(result)
 		print(menuResultList)
 	}
@@ -59,4 +61,3 @@ final class MenuData: ObservableObject {
 		isPlayed = true
 	}
 }
-
