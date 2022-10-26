@@ -126,13 +126,21 @@
 			children = (
 				7004CCAF290665340002FB58 /* MenuGameStartView.swift */,
 				70A3103F2908ECC600A020CE /* CalculatorView.swift */,
+				7004CCB12906671D0002FB58 /* RouletteView.swift */,
+				7004CCB3290667620002FB58 /* RouletteBoard.swift */,
+				70F4F36229096D70004A4B7F /* HistoryView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		70F4F36229096D70004A4B7F /* HistoryView */ = {
+			isa = PBXGroup;
+			children = (
 				70A31043290918D800A020CE /* CalculateHistoryView.swift */,
 				70A31045290918EA00A020CE /* MenuSelectHistoryView.swift */,
 				708A87A52906BF5E0086A0F6 /* ResultHistoryView.swift */,
-				7004CCB12906671D0002FB58 /* RouletteView.swift */,
-				7004CCB3290667620002FB58 /* RouletteBoard.swift */,
 			);
-			path = Views;
+			path = HistoryView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

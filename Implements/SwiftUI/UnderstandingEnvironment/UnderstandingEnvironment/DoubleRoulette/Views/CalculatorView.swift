@@ -11,13 +11,20 @@ import SwiftUI
 struct CalculatorView: View {
 	@ObservedObject var calculatingManager: CalculatingModel
 	
-	@State private var userInputNumber: String = ""
-	@State private var userInputText: String = "0"
-	@State private var calculateResult: String = "0"
-	@State private var tempOperator: String = ""
+	@State private var resultViewText: String = "0"
+	
+	@State private var firstInputNumber: String = ""
+	@State private var nextInputNumber: String = ""
+	@State private var usersOperator: String = ""
+	
+	@State private var usersLastInput: String = ""
+	@State private var calculateResult: String = "" {
+		didSet {
+			calculatingManager.userCalculateHistory.append(calculateResult)
+		}
+	}
 	
 	@State private var isCalculating: Bool = false
-	@State private var userInputArray: [String] = ["", ""]
 	
 	let calculatorArray: [[Calculator]] = [
 		[.clear, .oppsite, .percent, .divide],
@@ -38,61 +45,66 @@ struct CalculatorView: View {
 				HStack(alignment: .bottom) {
 					Spacer()
 					
-					if userInputNumber == "", isCalculating == false, calculateResult == "0" {
-						Text("0")
+					if !isCalculating {
+						Text(firstInputNumber)
+							.font(.system(size: 50))
+							.foregroundColor(.white)
+					} else if isCalculating, usersLastInput != "=" {
+						Text(nextInputNumber)
 							.font(.system(size: 50))
 							.foregroundColor(.white)
 					} else {
-						Text("\(userInputText)")
+						Text(calculateResult)
 							.font(.system(size: 50))
 							.foregroundColor(.white)
 					}
+					
+				
 				}.padding([.vertical, .trailing], 15)
 				
 				ForEach(calculatorArray, id: \.self) { buttons in
 					HStack {
 						ForEach(buttons, id: \.self) { item in
 							Button {
-								if userInputNumber == "" {
-									switch item.buttonName {
-									case "AC":
-										userInputNumber = ""
-										userInputText = "0"
-										userInputArray = ["",""]
-									case "+", "-", "*", "/", "=", "%", "+/-":
-										print("모르겠음..")
-									default:
-										userInputNumber = item.buttonName
-										userInputText = userInputNumber
+								// 계산 시작 전, 모든 입력은 마지막 인풋에 저장하도록 한다.
+								switch item.buttonCatergory {
+								case "number":
+									if !isCalculating {
+										// 계산이 시작되지 않으면 첫번째에 넣고
+										firstInputNumber += item.buttonName
+									} else { // 계산 중이면 앞으로 계속 두번째 숫자에 이어서 넣을거야
+										nextInputNumber += item.buttonName
 									}
-								} else { // 유저의 숫자가 입력되는 순간부터 트리거
-									switch item.buttonName {
-									case "AC":
-										userInputNumber = ""
-										userInputText = "0"
-										userInputArray = ["",""]
-									case "+", "-", "*", "/", "%", "+/-":
+								case "operator":
+									if !isCalculating {
+										// 계산이 이제 시작될 거니까 연산자를 할당한다.
+										usersOperator = item.buttonName
 										isCalculating = true
-										startCalculating(calculateNumber: userInputNumber,
-											  userOperator: item.buttonName)
-										userInputNumber = ""
-									case "=":
-										isCalculating = false
-										startCalculating(calculateNumber: userInputNumber,
-											  userOperator: item.buttonName)
-										
-										calculateResult = userInputArray[0]
-										userInputText = calculateResult
-										calculatingManager.userCalculateHistory.append(calculateResult)
-										userInputNumber = ""
-									default:
-										if !isCalculating {
-											calculateResult = "0"
+									} else {
+										// 계산 중인데 다시 연산자가 눌렸다면? 마지막 인풋이 숫자면 계산하고 아니면 어떠케하지
+										// 등호가 오면 계산시작
+										if item.buttonName == "AC" {
+											allClear()
+											print("All Cleared")
+										} else if usersLastInput == "=", item.buttonName != "=" {
+											// 유저가 등호를 입력하여 결과를 확인했는데 다시 연산하고 싶을 경우
+											// 결과를 1번 숫자로 옮기고 다시 숫자를 받아올 수 있게 nextInputNumber 초기화
+											firstInputNumber = calculateResult
+											nextInputNumber = ""
+										} else if usersLastInput == "=", item.buttonName == "=" {
+											// 만약 결과를 확인한 상태로 등호를 계속 누르면 이전의 숫자와 연산자로 연속계산한다.
+											startSerialCalculate()
+										} else if usersLastInput != "=", item.buttonName == "=" {
+											// 일반계산
+											startCalculate()
 										}
-										userInputNumber += item.buttonName
-										userInputText = userInputNumber
 									}
+									usersLastInput = item.buttonName
+									
+								default:
+									print(item.buttonName, item.buttonCatergory)
 								}
+								
 							} label: {
 								Text("\(item.buttonName)")
 									.font(.system(size: 36))
@@ -112,40 +124,61 @@ struct CalculatorView: View {
 		return UIScreen.main.bounds.height / 10
 	}
 	
-	private func startCalculating(calculateNumber: String, userOperator: String) {
-		switch userInputArray {
-		case ["", ""]:
-			userInputArray = [calculateNumber, userOperator]
+	private func startCalculate() {
+		switch usersOperator {
+		case "+":
+			calculateResult = String(Double(firstInputNumber)! + Double(nextInputNumber)!)
+			print(calculateResult)
+		case "-":
+			calculateResult = String(Double(firstInputNumber)! - Double(nextInputNumber)!)
+			print(calculateResult)
+		case "*":
+			calculateResult = String(Double(firstInputNumber)! * Double(nextInputNumber)!)
+			print(calculateResult)
+		case "/":
+			calculateResult = String(Double(firstInputNumber)! / Double(nextInputNumber)!)
+			print(calculateResult)
 		default:
-			switch userInputArray[1] {
-			case "+":
-				userInputArray[0] = String(Double(userInputArray[0])! + Double(calculateNumber)!)
-				userInputArray[1] = userOperator
-			case "-":
-				userInputArray[0] = String(Double(userInputArray[0])! - Double(calculateNumber)!)
-				userInputArray[1] = userOperator
-			case "*":
-				userInputArray[0] = String(Double(userInputArray[0])! * Double(calculateNumber)!)
-				userInputArray[1] = userOperator
-			case "/":
-				userInputArray[0] = String(Double(userInputArray[0])! / Double(calculateNumber)!)
-				userInputArray[1] = userOperator
-			case "=":
-				userInputArray[0] = calculateNumber
-				userInputArray[1] = userOperator
-			case "AC":
-				userInputArray = ["", ""]
-			default:
-				print("?")
-			}
+			print(usersOperator)
 		}
 	}
+	
+	private func startSerialCalculate() {
+		switch usersOperator {
+		case "+":
+			calculateResult = String(Double(calculateResult)! + Double(nextInputNumber)!)
+			print(calculateResult)
+		case "-":
+			calculateResult = String(Double(calculateResult)! - Double(nextInputNumber)!)
+			print(calculateResult)
+		case "*":
+			calculateResult = String(Double(calculateResult)! * Double(nextInputNumber)!)
+			print(calculateResult)
+		case "/":
+			calculateResult = String(Double(calculateResult)! / Double(nextInputNumber)!)
+			print(calculateResult)
+		default:
+			print(usersOperator)
+		}
+	}
+	
+	private func allClear() {
+		isCalculating = false
+		
+		firstInputNumber = ""
+		nextInputNumber = ""
+		usersOperator = ""
+		usersLastInput = ""
+		resultViewText = ""
+		calculateResult = ""
+	}
+	
 }
 
-enum Calculator {
-	case first, second, third, fourth, fifth, sixth, seventh, eighth, nineth, zero1, zero2
-	case plus, minus, multiply, divide, equal, dot
-	case percent, oppsite, clear
+enum Calculator: Int {
+	case first = 0, second, third, fourth, fifth, sixth, seventh, eighth, nineth, zero1, zero2, dot
+	case plus = 20, minus, multiply, divide, equal
+	case percent = 30, oppsite, clear
 	
 	var buttonName: String {
 		switch self {
@@ -192,6 +225,17 @@ enum Calculator {
 		}
 	}
 	
+	var buttonCatergory: String {
+		switch self.rawValue {
+		case 0...11:
+			return "number"
+		case 20...:
+			return "operator"
+		default:
+			return "unknown"
+		}
+	}
+	
 	var buttonColor: Color {
 		switch self {
 		case .percent, .oppsite, .clear:
@@ -211,6 +255,4 @@ enum Calculator {
 			return Color.white
 		}
 	}
-	
-	
 }
