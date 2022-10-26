@@ -18,7 +18,11 @@
 		706A761829061387003C5194 /* FirstTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706A761729061387003C5194 /* FirstTimeView.swift */; };
 		706A761A29061387003C5194 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706A761929061387003C5194 /* Assets.xcassets */; };
 		706A761D29061387003C5194 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706A761C29061387003C5194 /* Preview Assets.xcassets */; };
-		708A87A62906BF5E0086A0F6 /* ResultHIstoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708A87A52906BF5E0086A0F6 /* ResultHIstoryView.swift */; };
+		708A87A62906BF5E0086A0F6 /* ResultHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 708A87A52906BF5E0086A0F6 /* ResultHistoryView.swift */; };
+		70A310402908ECC600A020CE /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A3103F2908ECC600A020CE /* CalculatorView.swift */; };
+		70A310422908FB6600A020CE /* CalculatingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A310412908FB6600A020CE /* CalculatingModel.swift */; };
+		70A31044290918D800A020CE /* CalculateHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A31043290918D800A020CE /* CalculateHistoryView.swift */; };
+		70A31046290918EA00A020CE /* MenuSelectHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70A31045290918EA00A020CE /* MenuSelectHistoryView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +38,11 @@
 		706A761729061387003C5194 /* FirstTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeView.swift; sourceTree = "<group>"; };
 		706A761929061387003C5194 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706A761C29061387003C5194 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		708A87A52906BF5E0086A0F6 /* ResultHIstoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultHIstoryView.swift; sourceTree = "<group>"; };
+		708A87A52906BF5E0086A0F6 /* ResultHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultHistoryView.swift; sourceTree = "<group>"; };
+		70A3103F2908ECC600A020CE /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		70A310412908FB6600A020CE /* CalculatingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatingModel.swift; sourceTree = "<group>"; };
+		70A31043290918D800A020CE /* CalculateHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculateHistoryView.swift; sourceTree = "<group>"; };
+		70A31045290918EA00A020CE /* MenuSelectHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuSelectHistoryView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				7004CCBA29066BB20002FB58 /* MenuInformationModel.swift */,
+				70A310412908FB6600A020CE /* CalculatingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -116,9 +125,12 @@
 			isa = PBXGroup;
 			children = (
 				7004CCAF290665340002FB58 /* MenuGameStartView.swift */,
+				70A3103F2908ECC600A020CE /* CalculatorView.swift */,
+				70A31043290918D800A020CE /* CalculateHistoryView.swift */,
+				70A31045290918EA00A020CE /* MenuSelectHistoryView.swift */,
+				708A87A52906BF5E0086A0F6 /* ResultHistoryView.swift */,
 				7004CCB12906671D0002FB58 /* RouletteView.swift */,
 				7004CCB3290667620002FB58 /* RouletteBoard.swift */,
-				708A87A52906BF5E0086A0F6 /* ResultHIstoryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -195,14 +207,18 @@
 			files = (
 				706A761829061387003C5194 /* FirstTimeView.swift in Sources */,
 				7004CCA7290631E80002FB58 /* TimerObject.swift in Sources */,
-				708A87A62906BF5E0086A0F6 /* ResultHIstoryView.swift in Sources */,
+				708A87A62906BF5E0086A0F6 /* ResultHistoryView.swift in Sources */,
 				7004CCB22906671D0002FB58 /* RouletteView.swift in Sources */,
 				7004CCA92906336B0002FB58 /* SecondTimerView.swift in Sources */,
+				70A310402908ECC600A020CE /* CalculatorView.swift in Sources */,
 				7004CCB0290665340002FB58 /* MenuGameStartView.swift in Sources */,
 				706A761629061387003C5194 /* UnderstandingEnvironmentApp.swift in Sources */,
 				7004CCB4290667620002FB58 /* RouletteBoard.swift in Sources */,
+				70A310422908FB6600A020CE /* CalculatingModel.swift in Sources */,
 				7004CCBB29066BB20002FB58 /* MenuInformationModel.swift in Sources */,
 				7004CCAB29064A6A0002FB58 /* OtherView.swift in Sources */,
+				70A31046290918EA00A020CE /* MenuSelectHistoryView.swift in Sources */,
+				70A31044290918D800A020CE /* CalculateHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

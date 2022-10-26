@@ -10,6 +10,7 @@ import SwiftUI
 struct RouletteBoard: View {
 	@ObservedObject var menuData: MenuInformationModel
 	
+	let rouletteTitle: String
 	let dictionaryKey: String
 	var color: [Color] = [
 		.red, .yellow, .gray, .blue, .pink, .purple, .brown, .indigo, .green, .orange, .teal
@@ -20,9 +21,23 @@ struct RouletteBoard: View {
 			let centerWidth: CGFloat = geo.size.width / 2
 			let centerHeight: CGFloat = geo.size.height / 2
 			
+			Text("\(rouletteTitle)")
+				.font(.largeTitle)
+				.fontWeight(.black)
+				.foregroundColor(.pink)
+				.multilineTextAlignment(.leading)
+				.opacity(menuData.titleTextOpacity)
+				.padding()
+				.onAppear(perform: {
+					withAnimation(.easeIn(duration: 1.0)) {
+						menuData.titleTextOpacity = 1.0
+					}
+				})
+			
 			ZStack {
 				Circle()
 					.frame(width: 320, height: 320)
+					.position(x: centerWidth, y: centerHeight)
 				
 				ForEach(1 ..< menuData.userNumber + 1) { index in
 					let eachArcStartAngle: Double = Double(360 / menuData.userNumber * (index - 1))
@@ -47,7 +62,7 @@ struct RouletteBoard: View {
 					}
 				}
 				.rotationEffect(.degrees(Double(self.menuData.rotation)))
-				.animation(.timingCurve(0, 0.8, 0.2, 1, duration: 10), value: menuData.rotation)
+				.animation(.timingCurve(0, 0.8, 0.2, 1, duration: menuData.rotation == 0 ? 0 : 10), value: menuData.rotation)
 				
 				Image(systemName: "arrowtriangle.down.fill")
 					.resizable()
@@ -77,8 +92,9 @@ struct RouletteBoard: View {
 		}
 	}
 	
-	init(menuData: MenuInformationModel, isLunch: Bool) {
+	init(menuData: MenuInformationModel, isLunch: Bool, rouletteTitle: String) {
 		self.dictionaryKey = isLunch ? "Lunch" : "Dinner"
 		self.menuData = menuData
+		self.rouletteTitle = rouletteTitle
 	}
 }

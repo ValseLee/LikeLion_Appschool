@@ -1,16 +1,16 @@
 //
-//  ResultHIstoryView.swift
+//  MenuSelectHistoryView.swift
 //  UnderstandingEnvironment
 //
-//  Created by 이승준 on 2022/10/24.
+//  Created by 이승준 on 2022/10/26.
 //
 
 import SwiftUI
 
-struct ResultHIstoryView: View {
+struct MenuSelectHistoryView: View {
 	@ObservedObject var menuData: MenuInformationModel
 	
-	var body: some View {
+    var body: some View {
 		List {
 			if menuData.menuResultList.count == 1 {
 				Section(content: {
@@ -40,18 +40,6 @@ struct ResultHIstoryView: View {
 				})
 				.navigationTitle("결과 히스토리")
 			}
-		}
-		Spacer()
-	}
-}
-
-struct ResultTextModifier: ViewModifier {
-	func body(content: Content) -> some View {
-		content
-			.frame(minWidth: 275, minHeight: 75)
-			.font(.title3)
-			.background(Color.black)
-			.foregroundColor(.white)
-			.cornerRadius(25)
-	}
+		}.listStyle(GroupedListStyle())
+    }
 }

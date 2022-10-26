@@ -29,7 +29,7 @@ final class MenuInformationModel: ObservableObject {
 	public func resetData() {
 		userNumber = 10
 		rotation = 0
-		titleTextOpacity = 0.0
+		titleTextOpacity = 1.0
 		resultTextOpacity = 0.0
 		isPlayed = false
 	}

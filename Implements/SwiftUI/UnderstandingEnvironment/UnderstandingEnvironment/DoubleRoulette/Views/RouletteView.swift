@@ -18,20 +18,7 @@ struct RouletteView: View {
 		VStack() {
 			Spacer()
 			
-			Text("\(rouletteTitle)")
-				.font(.largeTitle)
-				.fontWeight(.black)
-				.foregroundColor(.pink)
-				.multilineTextAlignment(.leading)
-				.opacity(menuData.titleTextOpacity)
-				.padding()
-				.onAppear(perform: {
-					withAnimation(.easeInOut(duration: 1.0)) {
-						menuData.titleTextOpacity = 1.0
-					}
-				})
-			
-			RouletteBoard(menuData: menuData, isLunch: isLunch)
+			RouletteBoard(menuData: menuData, isLunch: isLunch, rouletteTitle: rouletteTitle)
 			
 			Stepper(value: $menuData.userNumber, in: 2...10, step: 1) {
 				Text("메뉴 \(menuData.userNumber)개 선택")
