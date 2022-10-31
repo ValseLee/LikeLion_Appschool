@@ -11,6 +11,10 @@
 		70ABBAD0290F4D9500F6E888 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ABBACF290F4D9500F6E888 /* ContentView.swift */; };
 		70ABBAD2290F4D9600F6E888 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70ABBAD1290F4D9600F6E888 /* Assets.xcassets */; };
 		70ABBAD5290F4D9600F6E888 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70ABBAD4290F4D9600F6E888 /* Preview Assets.xcassets */; };
+		70ABBADC290F5AA700F6E888 /* ExplicitAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ABBADB290F5AA700F6E888 /* ExplicitAnimationView.swift */; };
+		70ABBADE290F683B00F6E888 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ABBADD290F683B00F6E888 /* Transition.swift */; };
+		70ABBAE2290F6D4400F6E888 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ABBAE1290F6D4400F6E888 /* Home.swift */; };
+		70ABBAE5290F6D6600F6E888 /* EachChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70ABBAE4290F6D6600F6E888 /* EachChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		70ABBACF290F4D9500F6E888 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70ABBAD1290F4D9600F6E888 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70ABBAD4290F4D9600F6E888 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		70ABBADB290F5AA700F6E888 /* ExplicitAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExplicitAnimationView.swift; sourceTree = "<group>"; };
+		70ABBADD290F683B00F6E888 /* Transition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transition.swift; sourceTree = "<group>"; };
+		70ABBAE1290F6D4400F6E888 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		70ABBAE4290F6D6600F6E888 /* EachChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EachChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +59,8 @@
 		70ABBACC290F4D9500F6E888 /* UnderstandingAnimation */ = {
 			isa = PBXGroup;
 			children = (
-				70ABBACD290F4D9500F6E888 /* UnderstandingAnimationApp.swift */,
-				70ABBACF290F4D9500F6E888 /* ContentView.swift */,
+				70ABBAE0290F6D1D00F6E888 /* GraphAnimation */,
+				70ABBADF290F6D1400F6E888 /* Practice */,
 				70ABBAD1290F4D9600F6E888 /* Assets.xcassets */,
 				70ABBAD3290F4D9600F6E888 /* Preview Content */,
 			);
@@ -65,6 +73,26 @@
 				70ABBAD4290F4D9600F6E888 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		70ABBADF290F6D1400F6E888 /* Practice */ = {
+			isa = PBXGroup;
+			children = (
+				70ABBACF290F4D9500F6E888 /* ContentView.swift */,
+				70ABBADB290F5AA700F6E888 /* ExplicitAnimationView.swift */,
+				70ABBADD290F683B00F6E888 /* Transition.swift */,
+			);
+			path = Practice;
+			sourceTree = "<group>";
+		};
+		70ABBAE0290F6D1D00F6E888 /* GraphAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				70ABBACD290F4D9500F6E888 /* UnderstandingAnimationApp.swift */,
+				70ABBAE1290F6D4400F6E888 /* Home.swift */,
+				70ABBAE4290F6D6600F6E888 /* EachChartView.swift */,
+			);
+			path = GraphAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +165,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70ABBADC290F5AA700F6E888 /* ExplicitAnimationView.swift in Sources */,
 				70ABBAD0290F4D9500F6E888 /* ContentView.swift in Sources */,
+				70ABBAE2290F6D4400F6E888 /* Home.swift in Sources */,
+				70ABBADE290F683B00F6E888 /* Transition.swift in Sources */,
 				70ABBACE290F4D9500F6E888 /* UnderstandingAnimationApp.swift in Sources */,
+				70ABBAE5290F6D6600F6E888 /* EachChartView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
