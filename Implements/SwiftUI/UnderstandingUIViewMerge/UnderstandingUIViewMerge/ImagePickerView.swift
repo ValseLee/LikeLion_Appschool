@@ -8,8 +8,29 @@
 import SwiftUI
 
 struct ImagePickerView: View {
+	@State var imagePickerVisible: Bool = false
+	@State var selectedImage: Image? = Image(systemName: "photo")
+	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		ZStack {
+			VStack {
+				selectedImage?
+					.resizable()
+					.aspectRatio(1, contentMode: .fit)
+				
+				Button {
+					withAnimation {
+						self.imagePickerVisible.toggle()
+					}
+				} label: {
+					Text("select Image")
+				}
+			}.padding(10)
+			
+			if imagePickerVisible {
+				UIImagePicker(imagePickerVisible: $imagePickerVisible, selectedImage: $selectedImage)
+			}
+		}
     }
 }
 

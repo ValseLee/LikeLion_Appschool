@@ -10,12 +10,12 @@ import SwiftUI
 struct MergingWebAndMapView: View {
 	var body: some View {
 		TabView {
-			Text("Main WebView").tabItem {
+			WebTabView().tabItem {
 				Image(systemName: "safari")
 				Text("Web View")
 			}
 			
-			Text("???").tabItem {
+			MapTabView().tabItem {
 				Image(systemName: "map")
 				Text("Map")
 			}

@@ -7,18 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7087C50B291225800006705B /* MapTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7087C50A291225800006705B /* MapTabView.swift */; };
+		7087C50D291228500006705B /* UIWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7087C50C291228500006705B /* UIWebView.swift */; };
 		70B180852911FCD9000E9DAE /* UnderstandingUIViewMergeApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B180842911FCD9000E9DAE /* UnderstandingUIViewMergeApp.swift */; };
 		70B180872911FCD9000E9DAE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B180862911FCD9000E9DAE /* ContentView.swift */; };
 		70B180892911FCD9000E9DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B180882911FCD9000E9DAE /* Assets.xcassets */; };
 		70B1808C2911FCD9000E9DAE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70B1808B2911FCD9000E9DAE /* Preview Assets.xcassets */; };
+		70B180932911FCFF000E9DAE /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B180922911FCFF000E9DAE /* UIView.swift */; };
+		70B1809529120FBF000E9DAE /* UIImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1809429120FBF000E9DAE /* UIImagePicker.swift */; };
+		70B1809729121088000E9DAE /* ImagePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1809629121088000E9DAE /* ImagePickerView.swift */; };
+		70B180992912236E000E9DAE /* MergingWebAndMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B180982912236E000E9DAE /* MergingWebAndMapView.swift */; };
+		70B1809D29122539000E9DAE /* WebTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B1809C29122539000E9DAE /* WebTabView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7087C50A291225800006705B /* MapTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapTabView.swift; sourceTree = "<group>"; };
+		7087C50C291228500006705B /* UIWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWebView.swift; sourceTree = "<group>"; };
 		70B180812911FCD9000E9DAE /* UnderstandingUIViewMerge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UnderstandingUIViewMerge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70B180842911FCD9000E9DAE /* UnderstandingUIViewMergeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderstandingUIViewMergeApp.swift; sourceTree = "<group>"; };
 		70B180862911FCD9000E9DAE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70B180882911FCD9000E9DAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70B1808B2911FCD9000E9DAE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		70B180922911FCFF000E9DAE /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		70B1809429120FBF000E9DAE /* UIImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImagePicker.swift; sourceTree = "<group>"; };
+		70B1809629121088000E9DAE /* ImagePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerView.swift; sourceTree = "<group>"; };
+		70B180982912236E000E9DAE /* MergingWebAndMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MergingWebAndMapView.swift; sourceTree = "<group>"; };
+		70B1809C29122539000E9DAE /* WebTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebTabView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +67,10 @@
 			children = (
 				70B180842911FCD9000E9DAE /* UnderstandingUIViewMergeApp.swift */,
 				70B180862911FCD9000E9DAE /* ContentView.swift */,
+				70B180922911FCFF000E9DAE /* UIView.swift */,
+				70B1809629121088000E9DAE /* ImagePickerView.swift */,
+				70B1809429120FBF000E9DAE /* UIImagePicker.swift */,
+				70B1809A29122516000E9DAE /* WebAndMap */,
 				70B180882911FCD9000E9DAE /* Assets.xcassets */,
 				70B1808A2911FCD9000E9DAE /* Preview Content */,
 			);
@@ -65,6 +83,17 @@
 				70B1808B2911FCD9000E9DAE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		70B1809A29122516000E9DAE /* WebAndMap */ = {
+			isa = PBXGroup;
+			children = (
+				70B180982912236E000E9DAE /* MergingWebAndMapView.swift */,
+				7087C50C291228500006705B /* UIWebView.swift */,
+				70B1809C29122539000E9DAE /* WebTabView.swift */,
+				7087C50A291225800006705B /* MapTabView.swift */,
+			);
+			path = WebAndMap;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +167,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				70B180872911FCD9000E9DAE /* ContentView.swift in Sources */,
+				70B1809529120FBF000E9DAE /* UIImagePicker.swift in Sources */,
+				70B180932911FCFF000E9DAE /* UIView.swift in Sources */,
+				7087C50B291225800006705B /* MapTabView.swift in Sources */,
 				70B180852911FCD9000E9DAE /* UnderstandingUIViewMergeApp.swift in Sources */,
+				70B1809D29122539000E9DAE /* WebTabView.swift in Sources */,
+				70B1809729121088000E9DAE /* ImagePickerView.swift in Sources */,
+				7087C50D291228500006705B /* UIWebView.swift in Sources */,
+				70B180992912236E000E9DAE /* MergingWebAndMapView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
