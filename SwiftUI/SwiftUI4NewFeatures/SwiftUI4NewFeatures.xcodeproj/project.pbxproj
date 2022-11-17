@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		703F1D2929247D8F007E27D1 /* SharingAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703F1D2829247D8F007E27D1 /* SharingAPI.swift */; };
+		703F1D2B29247EAD007E27D1 /* PhotosUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 703F1D2A29247EAD007E27D1 /* PhotosUI.swift */; };
+		70C325A02925B3AF00ECB92B /* ChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70C3259F2925B3AF00ECB92B /* ChartView.swift */; };
 		70F5C5A129231160001807E3 /* SwiftUI4NewFeaturesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F5C5A029231160001807E3 /* SwiftUI4NewFeaturesApp.swift */; };
 		70F5C5A329231160001807E3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F5C5A229231160001807E3 /* ContentView.swift */; };
 		70F5C5A529231161001807E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F5C5A429231161001807E3 /* Assets.xcassets */; };
 		70F5C5A829231161001807E3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70F5C5A729231161001807E3 /* Preview Assets.xcassets */; };
+		70F5C5AF2923146B001807E3 /* GridDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F5C5AE2923146B001807E3 /* GridDemo.swift */; };
+		70F5C5B1292318C4001807E3 /* SheetDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F5C5B0292318C4001807E3 /* SheetDemo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		703F1D2829247D8F007E27D1 /* SharingAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingAPI.swift; sourceTree = "<group>"; };
+		703F1D2A29247EAD007E27D1 /* PhotosUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosUI.swift; sourceTree = "<group>"; };
+		70C3259F2925B3AF00ECB92B /* ChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView.swift; sourceTree = "<group>"; };
 		70F5C59D29231160001807E3 /* SwiftUI4NewFeatures.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI4NewFeatures.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70F5C5A029231160001807E3 /* SwiftUI4NewFeaturesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI4NewFeaturesApp.swift; sourceTree = "<group>"; };
 		70F5C5A229231160001807E3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70F5C5A429231161001807E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70F5C5A729231161001807E3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		70F5C5AE2923146B001807E3 /* GridDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridDemo.swift; sourceTree = "<group>"; };
+		70F5C5B0292318C4001807E3 /* SheetDemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetDemo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +63,11 @@
 			children = (
 				70F5C5A029231160001807E3 /* SwiftUI4NewFeaturesApp.swift */,
 				70F5C5A229231160001807E3 /* ContentView.swift */,
+				70F5C5AE2923146B001807E3 /* GridDemo.swift */,
+				70F5C5B0292318C4001807E3 /* SheetDemo.swift */,
+				703F1D2829247D8F007E27D1 /* SharingAPI.swift */,
+				703F1D2A29247EAD007E27D1 /* PhotosUI.swift */,
+				70C3259F2925B3AF00ECB92B /* ChartView.swift */,
 				70F5C5A429231161001807E3 /* Assets.xcassets */,
 				70F5C5A629231161001807E3 /* Preview Content */,
 			);
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				703F1D2929247D8F007E27D1 /* SharingAPI.swift in Sources */,
+				70F5C5B1292318C4001807E3 /* SheetDemo.swift in Sources */,
+				703F1D2B29247EAD007E27D1 /* PhotosUI.swift in Sources */,
+				70C325A02925B3AF00ECB92B /* ChartView.swift in Sources */,
 				70F5C5A329231160001807E3 /* ContentView.swift in Sources */,
 				70F5C5A129231160001807E3 /* SwiftUI4NewFeaturesApp.swift in Sources */,
+				70F5C5AF2923146B001807E3 /* GridDemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

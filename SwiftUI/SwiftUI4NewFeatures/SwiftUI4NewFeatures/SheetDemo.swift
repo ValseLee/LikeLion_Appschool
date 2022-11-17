@@ -8,8 +8,21 @@
 import SwiftUI
 
 struct SheetDemo: View {
+	@State private var showingSheet = false
+	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		VStack {
+			Button("Show") {
+				showingSheet.toggle()
+			}
+		}
+		.sheet(isPresented: $showingSheet) {
+			Text("Sheet Yeah")
+			// Drag로 어떻게 Sheet 크기를 조절하는가?
+				.presentationDetents([.height(250),
+									  .fraction(0.35),
+									  .large])
+		}
     }
 }
 

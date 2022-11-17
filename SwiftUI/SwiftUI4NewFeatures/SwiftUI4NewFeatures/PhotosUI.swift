@@ -6,11 +6,34 @@
 //
 
 import SwiftUI
+import PhotosUI
 
 struct PhotosUI: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+	@State private var selectedItem: PhotosPickerItem?
+	@State private var selectedImageData: Data?
+	
+	// Improved By UIKit -> PhotosUI
+	var body: some View {
+		VStack {
+			if let selectedImageData,
+			   let image = UIImage(data: selectedImageData) {
+				Image(uiImage: image)
+					.resizable()
+					.frame(width: 200, height: 200)
+			}
+			
+			PhotosPicker("picker", selection: $selectedItem, matching: .images)
+				.onChange(of: selectedItem) { newImage in
+					Task {
+						if let data = try? await
+							// loadTransferable은 에러 함수에 async다.
+							newImage?.loadTransferable(type: Data.self) {
+							selectedImageData = data
+						}
+					}
+				}
+		}
+	}
 }
 
 struct PhotosUI_Previews: PreviewProvider {

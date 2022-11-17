@@ -6,10 +6,17 @@
 //
 
 import SwiftUI
+import Charts
 
 struct ChartView: View {
+	// 맞춤화 차트. 막대 차트, 스트림 그래프, VoiceOver도 지원
+	
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+		Chart {
+			// 왜 x축을 써야 하나요 -> VoiceOver와 다국어 대응을 위해.
+			BarMark(x: .value("Shape Type", data[0].type),
+					y: .value("Total Count", data[0].count))
+		}
     }
 }
 
@@ -18,3 +25,15 @@ struct ChartView_Previews: PreviewProvider {
         ChartView()
     }
 }
+
+struct ToyShape: Identifiable {
+	var id = UUID()
+	var count: Double
+	var type: String
+}
+
+var data: [ToyShape] = [
+	.init(count: 5, type: "Cube"),
+	.init(count: 4, type: "Sphere"),
+	.init(count: 4, type: "Pyramid")
+]
