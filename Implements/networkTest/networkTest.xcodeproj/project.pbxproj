@@ -11,7 +11,12 @@
 		700CB81D292C6F3C0059C92E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CB81C292C6F3C0059C92E /* ContentView.swift */; };
 		700CB81F292C6F3D0059C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700CB81E292C6F3D0059C92E /* Assets.xcassets */; };
 		700CB822292C6F3D0059C92E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700CB821292C6F3D0059C92E /* Preview Assets.xcassets */; };
-		700CB829292C6F460059C92E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CB828292C6F460059C92E /* Network.swift */; };
+		700CB829292C6F460059C92E /* SeungjunNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CB828292C6F460059C92E /* SeungjunNetwork.swift */; };
+		70310031292DB20F00C6DCEC /* MainHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310030292DB20F00C6DCEC /* MainHomeView.swift */; };
+		70310034292DB69C00C6DCEC /* SiHyunNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310033292DB69C00C6DCEC /* SiHyunNetwork.swift */; };
+		70310036292DBDED00C6DCEC /* SoHeeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310035292DBDED00C6DCEC /* SoHeeNetwork.swift */; };
+		70310038292DC02C00C6DCEC /* JooHeeNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310037292DC02C00C6DCEC /* JooHeeNetwork.swift */; };
+		7031003A292DD4AF00C6DCEC /* HyejiNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70310039292DD4AF00C6DCEC /* HyejiNetwork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,7 +25,12 @@
 		700CB81C292C6F3C0059C92E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		700CB81E292C6F3D0059C92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		700CB821292C6F3D0059C92E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		700CB828292C6F460059C92E /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		700CB828292C6F460059C92E /* SeungjunNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeungjunNetwork.swift; sourceTree = "<group>"; };
+		70310030292DB20F00C6DCEC /* MainHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHomeView.swift; sourceTree = "<group>"; };
+		70310033292DB69C00C6DCEC /* SiHyunNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiHyunNetwork.swift; sourceTree = "<group>"; };
+		70310035292DBDED00C6DCEC /* SoHeeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoHeeNetwork.swift; sourceTree = "<group>"; };
+		70310037292DC02C00C6DCEC /* JooHeeNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JooHeeNetwork.swift; sourceTree = "<group>"; };
+		70310039292DD4AF00C6DCEC /* HyejiNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HyejiNetwork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				700CB81A292C6F3C0059C92E /* networkTestApp.swift */,
-				700CB828292C6F460059C92E /* Network.swift */,
+				70310032292DB67800C6DCEC /* Network */,
 				700CB81C292C6F3C0059C92E /* ContentView.swift */,
+				70310030292DB20F00C6DCEC /* MainHomeView.swift */,
 				700CB81E292C6F3D0059C92E /* Assets.xcassets */,
 				700CB820292C6F3D0059C92E /* Preview Content */,
 			);
@@ -68,6 +79,18 @@
 				700CB821292C6F3D0059C92E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		70310032292DB67800C6DCEC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				700CB828292C6F460059C92E /* SeungjunNetwork.swift */,
+				70310033292DB69C00C6DCEC /* SiHyunNetwork.swift */,
+				70310035292DBDED00C6DCEC /* SoHeeNetwork.swift */,
+				70310037292DC02C00C6DCEC /* JooHeeNetwork.swift */,
+				70310039292DD4AF00C6DCEC /* HyejiNetwork.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,9 +163,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7031003A292DD4AF00C6DCEC /* HyejiNetwork.swift in Sources */,
+				70310038292DC02C00C6DCEC /* JooHeeNetwork.swift in Sources */,
 				700CB81D292C6F3C0059C92E /* ContentView.swift in Sources */,
+				70310036292DBDED00C6DCEC /* SoHeeNetwork.swift in Sources */,
 				700CB81B292C6F3C0059C92E /* networkTestApp.swift in Sources */,
-				700CB829292C6F460059C92E /* Network.swift in Sources */,
+				70310031292DB20F00C6DCEC /* MainHomeView.swift in Sources */,
+				700CB829292C6F460059C92E /* SeungjunNetwork.swift in Sources */,
+				70310034292DB69C00C6DCEC /* SiHyunNetwork.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

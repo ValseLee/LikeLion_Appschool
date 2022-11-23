@@ -56,3 +56,4 @@ final class GhibliObject: ObservableObject {
 		return fetchedData
 	}
 }
+

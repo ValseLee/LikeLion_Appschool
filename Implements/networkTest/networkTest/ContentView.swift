@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-	@ObservedObject var ghibliManager = GhibliObject()
-	
+	@ObservedObject var ghibliManager: GhibliObject
+
 	var body: some View {
 		VStack {
 			if ghibliManager.isFetching {
-				let _ = print("?")
 				ProgressView()
 			} else {
 				List {
@@ -34,10 +33,4 @@ struct ContentView: View {
 			}
 		}
 	}
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
 }
