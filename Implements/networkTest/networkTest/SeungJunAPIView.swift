@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SeungJunAPIView: View {
 	@ObservedObject var ghibliManager: GhibliObject
 
 	var body: some View {
