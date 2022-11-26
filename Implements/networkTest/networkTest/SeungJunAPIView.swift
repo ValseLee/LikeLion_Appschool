@@ -17,7 +17,34 @@ struct SeungJunAPIView: View {
 			} else {
 				List {
 					ForEach(ghibliManager.ghibliArrays, id: \.id) { eachInfo in
-						Text("\(eachInfo.title)")
+						VStack {
+							HStack {
+								AsyncImage(url: URL(string: eachInfo.image)!) { phase in
+									switch phase {
+									case .empty:
+										ProgressView()
+											.padding()
+									case .success(let img):
+										img
+											.resizable()
+											.aspectRatio(1, contentMode: .fit)
+									case .failure:
+										Image(systemName: "star")
+									default:
+										EmptyView()
+									}
+								}
+								
+									
+								VStack(alignment: .leading) {
+									Text("영화 제목 : " + "\(eachInfo.title)")
+										.font(.title2)
+									Text("영화 줄거리 : " + "\(eachInfo.description)")
+										.font(.body)
+										.lineLimit(4)
+								}
+							}
+						}
 					}
 				}
 			}

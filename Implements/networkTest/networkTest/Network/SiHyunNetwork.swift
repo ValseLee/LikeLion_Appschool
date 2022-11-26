@@ -35,6 +35,6 @@ final class DisneyNetwork: ObservableObject {
 		
 		let data = try await URLSession.shared.data(from: url)
 		let result = try JSONDecoder().decode(DisneyData.self, from: data.0)
-		print(result)
+	
 	}
 }

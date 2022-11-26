@@ -40,7 +40,7 @@ struct MainHomeView: View {
 						case "박시현 님":
 							Text("\(nameArray[index])")
 						case "이승준 님":
-							ContentView(ghibliManager: GhibliObject())
+							SeungJunAPIView(ghibliManager: GhibliObject())
 						case "정소희 님":
 							Text("\(nameArray[index])")
 						case "홍주희 님":
@@ -61,7 +61,6 @@ struct MainHomeView: View {
 		}
 		.task {
 			do {
-				// 시현님 http api 이슈 ㅠㅠ
 				try await disneyNetworkManager.getDisneyData()
 				try await harryPotterNetworkManager.getHarryPotterInfo()
 				try await deaguNetworkManager.getDeaguRestaurant()

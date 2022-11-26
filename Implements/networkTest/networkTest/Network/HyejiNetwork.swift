@@ -37,6 +37,6 @@ final class EmojiDataNetwork: ObservableObject {
 	func getEmojiDataAsync() async throws -> Void {
 		let task = try await URLSession.shared.data(from: url)
 		let result = try JSONDecoder().decode([EmojiData].self, from: task.0)
-		print(result)
+		
 	}
 }

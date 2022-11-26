@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		700CB81B292C6F3C0059C92E /* networkTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CB81A292C6F3C0059C92E /* networkTestApp.swift */; };
-		700CB81D292C6F3C0059C92E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CB81C292C6F3C0059C92E /* ContentView.swift */; };
+		700CB81D292C6F3C0059C92E /* SeungJunAPIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CB81C292C6F3C0059C92E /* SeungJunAPIView.swift */; };
 		700CB81F292C6F3D0059C92E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700CB81E292C6F3D0059C92E /* Assets.xcassets */; };
 		700CB822292C6F3D0059C92E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 700CB821292C6F3D0059C92E /* Preview Assets.xcassets */; };
 		700CB829292C6F460059C92E /* SeungjunNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 700CB828292C6F460059C92E /* SeungjunNetwork.swift */; };
@@ -22,7 +22,7 @@
 /* Begin PBXFileReference section */
 		700CB817292C6F3C0059C92E /* networkTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = networkTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		700CB81A292C6F3C0059C92E /* networkTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkTestApp.swift; sourceTree = "<group>"; };
-		700CB81C292C6F3C0059C92E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		700CB81C292C6F3C0059C92E /* SeungJunAPIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeungJunAPIView.swift; sourceTree = "<group>"; };
 		700CB81E292C6F3D0059C92E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		700CB821292C6F3D0059C92E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		700CB828292C6F460059C92E /* SeungjunNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeungjunNetwork.swift; sourceTree = "<group>"; };
@@ -65,7 +65,7 @@
 			children = (
 				700CB81A292C6F3C0059C92E /* networkTestApp.swift */,
 				70310032292DB67800C6DCEC /* Network */,
-				700CB81C292C6F3C0059C92E /* ContentView.swift */,
+				700CB81C292C6F3C0059C92E /* SeungJunAPIView.swift */,
 				70310030292DB20F00C6DCEC /* MainHomeView.swift */,
 				700CB81E292C6F3D0059C92E /* Assets.xcassets */,
 				700CB820292C6F3D0059C92E /* Preview Content */,
@@ -165,7 +165,7 @@
 			files = (
 				7031003A292DD4AF00C6DCEC /* HyejiNetwork.swift in Sources */,
 				70310038292DC02C00C6DCEC /* JooHeeNetwork.swift in Sources */,
-				700CB81D292C6F3C0059C92E /* ContentView.swift in Sources */,
+				700CB81D292C6F3C0059C92E /* SeungJunAPIView.swift in Sources */,
 				70310036292DBDED00C6DCEC /* SoHeeNetwork.swift in Sources */,
 				700CB81B292C6F3C0059C92E /* networkTestApp.swift in Sources */,
 				70310031292DB20F00C6DCEC /* MainHomeView.swift in Sources */,

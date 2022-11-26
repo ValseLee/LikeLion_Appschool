@@ -42,6 +42,6 @@ final class DeaguNetwork: ObservableObject {
 		
 		let task = try await session.data(from: url)
 		let result = try JSONDecoder().decode(DeaguRestaurant.self, from: task.0)
-		print(result)
+		
 	}
 }

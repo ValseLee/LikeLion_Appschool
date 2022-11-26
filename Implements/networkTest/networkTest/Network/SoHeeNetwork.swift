@@ -43,6 +43,5 @@ final class HarryPotterNetwork: ObservableObject {
 		
 		let data = try await session.data(from: url)
 		let result = try JSONDecoder().decode([HarryPotter].self, from: data.0)
-		print(result)
 	}
 }
