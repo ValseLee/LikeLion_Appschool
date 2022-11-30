@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70D4E2F72936EDFF0080DB74 /* MenuItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D4E2F62936EDFF0080DB74 /* MenuItems.swift */; };
 		70D5A8312936D5C20001A3D1 /* MultiplatformTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5A8302936D5C20001A3D1 /* MultiplatformTestApp.swift */; };
 		70D5A8332936D5C20001A3D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D5A8322936D5C20001A3D1 /* ContentView.swift */; };
 		70D5A8352936D5C20001A3D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70D5A8342936D5C20001A3D1 /* Assets.xcassets */; };
@@ -14,6 +15,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70D4E2F62936EDFF0080DB74 /* MenuItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItems.swift; sourceTree = "<group>"; };
 		70D5A82D2936D5C10001A3D1 /* MultiplatformTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MultiplatformTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70D5A8302936D5C20001A3D1 /* MultiplatformTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplatformTestApp.swift; sourceTree = "<group>"; };
 		70D5A8322936D5C20001A3D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 			children = (
 				70D5A8302936D5C20001A3D1 /* MultiplatformTestApp.swift */,
 				70D5A8322936D5C20001A3D1 /* ContentView.swift */,
+				70D4E2F62936EDFF0080DB74 /* MenuItems.swift */,
 				70D5A8342936D5C20001A3D1 /* Assets.xcassets */,
 				70D5A8362936D5C20001A3D1 /* MultiplatformTest.entitlements */,
 				70D5A8372936D5C20001A3D1 /* Preview Content */,
@@ -141,6 +144,7 @@
 			files = (
 				70D5A8332936D5C20001A3D1 /* ContentView.swift in Sources */,
 				70D5A8312936D5C20001A3D1 /* MultiplatformTestApp.swift in Sources */,
+				70D4E2F72936EDFF0080DB74 /* MenuItems.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
