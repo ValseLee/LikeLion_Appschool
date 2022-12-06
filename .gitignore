@@ -89,3 +89,6 @@ fastlane/test_output
 
 iOSInjectionProject/
 Doodles/
+
+# NO API KEYS IN MY GITHUB!!
+/Implements/FireBaseTeset/FireBaseTeset/GoogleService-Info (1).plist
