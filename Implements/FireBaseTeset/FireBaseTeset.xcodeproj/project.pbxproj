@@ -7,23 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		70C73E31294012990099B0A7 /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 70C73E30294012990099B0A7 /* GoogleService-Info (1).plist */; };
 		70E6355E293F12400015121B /* FireBaseTesetApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6355D293F12400015121B /* FireBaseTesetApp.swift */; };
 		70E63560293F12400015121B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70E6355F293F12400015121B /* ContentView.swift */; };
 		70E63562293F12400015121B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E63561293F12400015121B /* Assets.xcassets */; };
 		70E63565293F12400015121B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70E63564293F12400015121B /* Preview Assets.xcassets */; };
-		70E6356C293F12EB0015121B /* GoogleService-Info (1).plist in Resources */ = {isa = PBXBuildFile; fileRef = 70E6356B293F12EB0015121B /* GoogleService-Info (1).plist */; };
 		70E6356F293F134A0015121B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 70E6356E293F134A0015121B /* FirebaseDatabase */; };
 		70E63571293F134A0015121B /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 70E63570293F134A0015121B /* FirebaseFirestore */; };
 		70E63573293F134A0015121B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 70E63572293F134A0015121B /* FirebaseStorage */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		70C73E30294012990099B0A7 /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 		70E6355A293F12400015121B /* FireBaseTeset.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseTeset.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		70E6355D293F12400015121B /* FireBaseTesetApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseTesetApp.swift; sourceTree = "<group>"; };
 		70E6355F293F12400015121B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		70E63561293F12400015121B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		70E63564293F12400015121B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		70E6356B293F12EB0015121B /* GoogleService-Info (1).plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info (1).plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,7 +62,7 @@
 				70E6355D293F12400015121B /* FireBaseTesetApp.swift */,
 				70E6355F293F12400015121B /* ContentView.swift */,
 				70E63561293F12400015121B /* Assets.xcassets */,
-				70E6356B293F12EB0015121B /* GoogleService-Info (1).plist */,
+				70C73E30294012990099B0A7 /* GoogleService-Info (1).plist */,
 				70E63563293F12400015121B /* Preview Content */,
 			);
 			path = FireBaseTeset;
@@ -143,7 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				70E63565293F12400015121B /* Preview Assets.xcassets in Resources */,
-				70E6356C293F12EB0015121B /* GoogleService-Info (1).plist in Resources */,
+				70C73E31294012990099B0A7 /* GoogleService-Info (1).plist in Resources */,
 				70E63562293F12400015121B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
